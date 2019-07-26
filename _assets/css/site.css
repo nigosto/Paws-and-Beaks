@@ -1,4 +1,5 @@
-body {
-    background: #000;
-    height: 100vh;
-}
+@import url('variables.css');
+@import url('typography.css');
+@import url('layout.css');
+@import url('header.css');
+@import url('footer.css');

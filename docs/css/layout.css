@@ -1,0 +1,12 @@
+.site {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-main {
+    flex: 1 0 40rem;
+}
+
+.wrapper {
+    padding: 0.5rem 10%;
+}
