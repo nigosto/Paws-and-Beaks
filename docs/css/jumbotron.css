@@ -1,0 +1,181 @@
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron:before {
+    display: block;
+    content: '';
+    background-image: url('http://www.ingridkuhn.com/themes/happypaws/img/slide1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 50%;
+}
+
+.jumbotron-content {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(55deg);
+    -webkit-animation: slideFromLeft 1s ease-in-out;
+            animation: slideFromLeft 1s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    color: white;
+}
+
+.jumbotron-text {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 20;
+    transform: rotate(-55deg);
+}
+
+.jumbotron-text p:nth-child(2) {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.jumbotron-text p:nth-child(4) {
+    margin-bottom: 1rem;
+}
+
+.btn-about {
+    background: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5em;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+    .jumbotron-content {
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: rotate(0deg);
+        color: white;
+        -webkit-animation: slideFromBottom 1s ease-in-out;
+                animation: slideFromBottom 1s ease-in-out;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+    }
+
+    .jumbotron-text {
+        transform: rotate(0deg) translate(-50%,0 );
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        top: 0;
+        width: 100%;
+    }
+
+    .jumbotron-text p, .jumbotron-text h1 {
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+    }
+
+    .jumbotron-text h1 {
+        margin-right: 0.5em;
+        width: 45%;
+        text-align: right;
+        font-size: 2em;
+        margin-top: 2rem;
+        transform: translateX(-10%);
+    }
+
+    .jumbotron-text p:nth-child(2) {
+        margin: 0;
+        margin-top: 2rem;
+        font-size: 2em;
+        width: 45%;
+        text-align: left;
+        transform: translateX(-10%);
+    }
+
+    .jumbotron-text p:nth-child(3) {
+        width: 47%;
+        text-align: right;
+
+    }
+
+    .jumbotron-text p:nth-child(4){
+        text-align: left;
+        width: 47%;
+        margin: 0;
+        margin-left: 0.5em;
+    }
+
+    .btn-about {
+        padding: 0.7em 1.5em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .jumbotron-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jumbotron-text {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .jumbotron-text {
+        font-size: 0.4rem;
+    }
+}
+
+@-webkit-keyframes slideFromLeft{
+    from {
+        left: -100%;
+    }
+
+    to {
+        top: 20%;
+        left: -30%;
+    }
+}
+
+@keyframes slideFromLeft{
+    from {
+        left: -100%;
+    }
+
+    to {
+        top: 20%;
+        left: -30%;
+    }
+}
+
+@-webkit-keyframes slideFromBottom {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 50%;
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 50%;
+    }
+}

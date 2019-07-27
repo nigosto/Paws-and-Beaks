@@ -15,6 +15,16 @@
     <div class="site">
         {% include header.html %}
         <main class="site-main">
+            <div class="jumbotron">
+                <div class="jumbotron-content">
+                    <div class="jumbotron-text">
+                        <h1>Welcome</h1>
+                        <p>to Paws and Beaks</p>
+                        <p>We offer all the best quality products </p><p>and services for your adorable pets.</p>
+                        <a href="{{ site.baseurl }}about/" class="btn-about">About us</a>
+                    </div>
+                </div>
+            </div>
             {{content}}
         </main>
         {% include footer.html %}
