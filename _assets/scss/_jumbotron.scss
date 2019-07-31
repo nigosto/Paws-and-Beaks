@@ -18,10 +18,8 @@
     height: 100%;
     width: 100%;
     transform: rotate(55deg);
-    -webkit-animation: slideFromLeft 1s ease-in-out;
-            animation: slideFromLeft 1s ease-in-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation: slideFromLeft 1s ease-in-out;
+    animation-fill-mode: both;
     color: white;
 }
 
@@ -60,10 +58,8 @@
         width: 100%;
         transform: rotate(0deg);
         color: white;
-        -webkit-animation: slideFromBottom 1s ease-in-out;
-                animation: slideFromBottom 1s ease-in-out;
-        -webkit-animation-fill-mode: both;
-                animation-fill-mode: both;
+        animation: slideFromBottom 1s ease-in-out;
+        animation-fill-mode: both;
     }
 
     .jumbotron-text {
@@ -76,6 +72,7 @@
         left: 50%;
         top: 0;
         width: 100%;
+        font-size: 1.75vw;
     }
 
     .jumbotron-text p, .jumbotron-text h1 {
@@ -89,13 +86,13 @@
         width: 45%;
         text-align: right;
         font-size: 2em;
-        margin-top: 2rem;
+        margin-top: 1.75rem;
         transform: translateX(-10%);
     }
 
     .jumbotron-text p:nth-child(2) {
         margin: 0;
-        margin-top: 2rem;
+        margin-top: 1.75rem;
         font-size: 2em;
         width: 45%;
         text-align: left;
@@ -120,35 +117,6 @@
     }
 }
 
-@media screen and (max-width: 640px) {
-    .jumbotron-text {
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .jumbotron-text {
-        font-size: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .jumbotron-text {
-        font-size: 0.4rem;
-    }
-}
-
-@-webkit-keyframes slideFromLeft{
-    from {
-        left: -100%;
-    }
-
-    to {
-        top: 20%;
-        left: -30%;
-    }
-}
-
 @keyframes slideFromLeft{
     from {
         left: -100%;
@@ -157,16 +125,6 @@
     to {
         top: 20%;
         left: -30%;
-    }
-}
-
-@-webkit-keyframes slideFromBottom {
-    from {
-        top: 100%;
-    }
-
-    to {
-        top: 50%;
     }
 }
 

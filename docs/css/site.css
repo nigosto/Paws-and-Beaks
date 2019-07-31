@@ -1,6 +1,399 @@
-@import url('variables.css');
-@import url('typography.css');
-@import url('layout.css');
-@import url('header.css');
-@import url('footer.css');
-@import url('jumbotron.css');
+:root {
+  --primary-color: #d35400;
+  --secondary-color: #f29c12;
+  --primary-dark-color: #323232;
+  --secondary-dark-color: #a7a7a7; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font: 12px/1.5 Georgia, serif;
+  box-sizing: border-box; }
+
+@media (min-width: 600px) {
+  html {
+    font-size: 14px; } }
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; } }
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px; } }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+li {
+  list-style: none outside; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-weight: normal; }
+
+h1 {
+  font-size: 2.6em; }
+
+h2 {
+  font-size: 2.2em; }
+
+h3 {
+  font-size: 1.8em; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1em; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, table, form, input, select, option, textarea {
+  font: inherit; }
+
+p, ul, ol {
+  padding-bottom: 1.5em; }
+
+ul, ol {
+  padding-left: 2em; }
+
+ul ul, ol ol, ul ol, ol ul {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+ul > li > ul > li {
+  list-style-type: armenian; }
+
+ol > li > ol > li {
+  list-style-type: upper-roman; }
+
+blockquote {
+  padding: 1rem; }
+
+blockquote .author {
+  font-style: italic;
+  text-align: right;
+  opacity: 0.5; }
+
+blockquote .author:before {
+  display: inline-block;
+  content: '\2014';
+  padding-right: 0.5em; }
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.site-main {
+  flex-grow: 1; }
+
+.wrapper {
+  padding: 0.5rem 10%; }
+
+.site-header {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #FFF;
+  align-items: center;
+  box-shadow: 0px 7px 12px -5px rgba(0, 0, 0, 0.2);
+  z-index: 10; }
+
+.site-title {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease; }
+
+.site-title h1 {
+  margin: 0; }
+
+.site-title::before {
+  display: block;
+  content: '';
+  background-image: url("https://instudio.mabangapp.com/img/039/CR0088/CR0088g05.jpg");
+  background-size: 100%;
+  width: 3em;
+  height: 3em;
+  margin-right: 0.5rem;
+  transition: background-image 0.3s ease; }
+
+.site-title:hover {
+  color: var(--primary-color);
+  cursor: pointer; }
+
+.site-title:hover::before {
+  background-image: url("https://i.ibb.co/HrxkWS9/orange-paw.jpg");
+  background-size: 100%; }
+
+.site-nav {
+  margin-left: auto; }
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  padding: 0; }
+
+.site-nav i {
+  margin-right: 0.5rem; }
+
+.site-nav li {
+  transition: color 0.3s ease;
+  font-size: 1.2em; }
+
+.site-nav li:hover {
+  color: var(--primary-color); }
+
+.site-nav li:not(:last-child) {
+  margin-right: 2em; }
+
+.hamburger_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+
+.hamburger_label {
+  display: none; }
+
+@media screen and (max-width: 960px) {
+  .site-header {
+    flex-wrap: wrap; }
+  .site-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
+  .site-nav ul {
+    opacity: 0;
+    display: flex;
+    flex-direction: column; }
+  .site-nav ul li {
+    opacity: 0;
+    transition: opacity 0.15s ease-in; }
+  .hamburger_label {
+    display: block;
+    margin-left: auto; }
+  .hamburger_checkbox:checked + .site-header .site-nav {
+    position: static;
+    opacity: 1;
+    flex: 1 0 100%; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    top: 4.5em;
+    left: 0; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li {
+    margin: 0;
+    text-align: center;
+    padding: 0.7em 0;
+    opacity: 1;
+    width: 100%;
+    background: #FFF; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
+    padding-bottom: 0.8em; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(2) {
+    transition-delay: 0.1s; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(3) {
+    transition-delay: 0.2s; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(4) {
+    transition-delay: 0.3s; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
+    margin-bottom: 1em; } }
+
+@media screen and (max-width: 480px) {
+  .site-title::before {
+    width: 2em;
+    height: 2em; }
+  .site-title h1 {
+    font-size: 2em; }
+  .hamburger_checkbox:checked + .site-header .site-nav ul {
+    top: 4rem; } }
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary-dark-color);
+  color: var(--secondary-dark-color);
+  padding-top: 3em;
+  padding-bottom: 2em; }
+
+.site-footer a:hover {
+  border-bottom: 1px solid var(--secondary-dark-color); }
+
+.contacts a {
+  margin-left: 0.5rem; }
+
+.newsletter p {
+  padding-bottom: 0.5rem; }
+
+.newsletter form {
+  display: flex; }
+
+.newsletter input {
+  height: 2.3em;
+  border: 0;
+  background: #FFF;
+  padding: 0 1rem;
+  border-radius: 0.3rem; }
+
+.newsletter input[type="text"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.newsletter input[type="submit"] {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #555;
+  color: var(--secondary-dark-color); }
+
+@media screen and (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center; }
+  .navigation {
+    display: none; }
+  .contacts {
+    order: 2; }
+  .newsletter {
+    order: 1;
+    margin-bottom: 2rem; } }
+
+.jumbotron {
+  position: relative;
+  overflow: hidden; }
+
+.jumbotron:before {
+  display: block;
+  content: '';
+  background-image: url("http://www.ingridkuhn.com/themes/happypaws/img/slide1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 50%; }
+
+.jumbotron-content {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotate(55deg);
+  -webkit-animation: slideFromLeft 1s ease-in-out;
+          animation: slideFromLeft 1s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  color: white; }
+
+.jumbotron-text {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: 20;
+  transform: rotate(-55deg); }
+
+.jumbotron-text p:nth-child(2) {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem; }
+
+.jumbotron-text p:nth-child(4) {
+  margin-bottom: 1rem; }
+
+.btn-about {
+  background: var(--secondary-color);
+  padding: 1rem 2rem;
+  border-radius: 0.5em;
+  margin-top: 1rem; }
+
+@media screen and (max-width: 960px) {
+  .jumbotron-content {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(0deg);
+    color: white;
+    -webkit-animation: slideFromBottom 1s ease-in-out;
+            animation: slideFromBottom 1s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .jumbotron-text {
+    transform: rotate(0deg) translate(-50%, 0);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    font-size: 1.75vw; }
+  .jumbotron-text p, .jumbotron-text h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: none; }
+  .jumbotron-text h1 {
+    margin-right: 0.5em;
+    width: 45%;
+    text-align: right;
+    font-size: 2em;
+    margin-top: 1.75rem;
+    transform: translateX(-10%); }
+  .jumbotron-text p:nth-child(2) {
+    margin: 0;
+    margin-top: 1.75rem;
+    font-size: 2em;
+    width: 45%;
+    text-align: left;
+    transform: translateX(-10%); }
+  .jumbotron-text p:nth-child(3) {
+    width: 47%;
+    text-align: right; }
+  .jumbotron-text p:nth-child(4) {
+    text-align: left;
+    width: 47%;
+    margin: 0;
+    margin-left: 0.5em; }
+  .btn-about {
+    padding: 0.7em 1.5em; } }
+
+@-webkit-keyframes slideFromLeft {
+  from {
+    left: -100%; }
+  to {
+    top: 20%;
+    left: -30%; } }
+
+@keyframes slideFromLeft {
+  from {
+    left: -100%; }
+  to {
+    top: 20%;
+    left: -30%; } }
+
+@-webkit-keyframes slideFromBottom {
+  from {
+    top: 100%; }
+  to {
+    top: 50%; } }
+
+@keyframes slideFromBottom {
+  from {
+    top: 100%; }
+  to {
+    top: 50%; } }
