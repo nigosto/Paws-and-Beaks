@@ -5,10 +5,10 @@
     color: var(--secondary-dark-color);
     padding-top: 3em;
     padding-bottom: 2em;
-}
 
-.site-footer a:hover {
-    border-bottom: 1px solid var(--secondary-dark-color);
+    a:hover {
+        border-bottom: 1px solid var(--secondary-dark-color);
+    }
 }
 
 .contacts a {

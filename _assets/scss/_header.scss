@@ -12,58 +12,58 @@
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
-}
 
-.site-title h1 {
-    margin: 0;
-}
+    h1 {
+        margin: 0;
+    }
 
-.site-title::before {
-    display: block;
-    content: '';
-    background-image: url('https://instudio.mabangapp.com/img/039/CR0088/CR0088g05.jpg');
-    background-size: 100%;
-    width: 3em;
-    height: 3em;
-    margin-right: 0.5rem;
-    transition: background-image 0.3s ease;
-}
+    &::before {
+        display: block;
+        content: '';
+        background-image: url('https://instudio.mabangapp.com/img/039/CR0088/CR0088g05.jpg');
+        background-size: 100%;
+        width: 3em;
+        height: 3em;
+        margin-right: 0.5rem;
+        transition: background-image 0.3s ease;
+    }
 
-.site-title:hover {
-    color: var(--primary-color);
-    cursor: pointer;
-}
+    &:hover {
+        color: var(--primary-color);
+        cursor: pointer;
+    }
 
-.site-title:hover::before {
-    background-image: url('https://i.ibb.co/HrxkWS9/orange-paw.jpg');
-    background-size: 100%;
+    &:hover::before {
+        background-image: url('https://i.ibb.co/HrxkWS9/orange-paw.jpg');
+        background-size: 100%;
+    }
 }
 
 .site-nav {
     margin-left: auto;
-}
 
-.site-nav ul {
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
 
-.site-nav i {
-    margin-right: 0.5rem;
-}
+    i {
+        margin-right: 0.5rem;
+    }
 
-.site-nav li {
-    transition: color 0.3s ease;
-    font-size: 1.2em;
-}
+    li {
+        transition: color 0.3s ease;
+        font-size: 1.2em;
 
-.site-nav li:hover {
-    color: var(--primary-color);
-}
+        &:hover {
+            color: var(--primary-color);
+        }
 
-.site-nav li:not(:last-child) {
-    margin-right: 2em;
+        &:not(:last-child) {
+            margin-right: 2em;
+        }
+    }
 }
 
 .hamburger_checkbox {
@@ -87,17 +87,17 @@
         top: 0;
         left: 0;
         opacity: 0;
-    }
 
-    .site-nav ul {
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-    }
+        ul {
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
 
-    .site-nav ul li {
-        opacity: 0;
-        transition: opacity 0.15s ease-in;
+            li {
+                opacity: 0;
+                transition: opacity 0.15s ease-in;
+            }
+        }
     }
 
     .hamburger_label {
@@ -109,36 +109,34 @@
         position: static;
         opacity: 1;
         flex: 1 0 100%;
-    }
 
-    .hamburger_checkbox:checked + .site-header .site-nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 1;
-        width: 100%;
-        position: absolute;
-        top: 4.5em; left: 0;
-    }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 1;
+            width: 100%;
+            position: absolute;
+            top: 4.5em; left: 0;
 
-    .hamburger_checkbox:checked + .site-header .site-nav ul li {
-        margin: 0;
-        text-align: center;
-        padding: 0.7em 0;
-        opacity: 1;
-        width: 100%;
-        background: #FFF;
-    }
+            li {
+                margin: 0;
+                text-align: center;
+                padding: 0.7em 0;
+                opacity: 1;
+                width: 100%;
+                background: #FFF;
 
-    .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {padding-bottom: 0.8em;}
+                &:last-child {padding-bottom: 0.8em;}
 
-
-    .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(2) {transition-delay: 0.1s}
-    .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(3) {transition-delay: 0.2s}
-    .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(4) {transition-delay: 0.3s}
-
-    .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
-        margin-bottom: 1em;
+                &:nth-child(2) {transition-delay: 0.1s}
+                &:nth-child(3) {transition-delay: 0.2s}
+                &:nth-child(4) {transition-delay: 0.3s}
+                &:last-child {
+                    margin-bottom: 1em;
+                }
+            }
+        }
     }
 }
 

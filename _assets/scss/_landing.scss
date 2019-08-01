@@ -1,0 +1,170 @@
+@mixin mq($width) {
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+
+.section-title {
+    margin: 8rem auto;
+    display: flex;
+    justify-content: center;
+
+    @include mq(768px) {
+        margin: 4rem auto;
+    }
+
+    h2 {
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--primary-color);
+        position: relative;
+        
+        img {
+            background: #FFF;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -35%;
+            transform: translateX(-50%);
+            overflow: hidden;
+            border-radius: 50%;
+            width: 3rem;
+            border: 2px solid var(--primary-color);
+        }
+    }
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+
+    @include mq(768px) {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+
+        &-img {
+            overflow: hidden;
+            position: relative;
+            box-shadow: 2px 5px 12px 3px rgba(0,0,0,0.5);
+
+            &::before {
+                display: block;
+                content: '';
+                padding-top: 56.25%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-content {
+            margin-top: 1.5rem;
+
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.offer {
+    padding: 0 20%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    background-image: url('https://kagitbutik.com/wp-content/uploads/2018/06/kuslar.png'), url('http://www.silhouettestyle.com.au/media/catalog/product/cache/1/image/265x/9df78eab33525d08d6e5fb8d27136e95/4/B/4BI002S.png_1.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color);
+    background-attachment: fixed;
+    color: #FFF;
+
+    @include mq(960px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    @include mq(768px) {
+        grid-template-columns: 1fr;
+
+        &-img {
+            display: none;
+        }
+    }
+
+    &-img {
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            display: block;
+            content: '';
+            padding-top: 177.77%;
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            width: auto;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5rem;
+    position: relative;
+
+    @include mq(960px) {
+        grid-gap: 2rem;       
+    }
+
+    @include mq(768px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 4rem;
+    }
+
+    .review {
+        border: 2px solid var(--primary-color); 
+        box-shadow: 2px 5px 12px 3px rgba(0,0,0,0.5);
+
+        &-img {
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            position: absolute;
+            transform: translate(30%,-50%);
+            background: #FFF;
+            box-shadow: 0 0 12px 3px rgba(0,0,0,0.3);
+
+            img {
+                width: 6em;
+                height: auto;
+            }
+        }
+
+        &-content {
+            padding: 1.5rem;
+            padding-top: 3rem;
+
+            
+        }
+    }
+}

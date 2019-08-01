@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap");
 :root {
   --primary-color: #d35400;
   --secondary-color: #f29c12;
@@ -33,8 +34,8 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
-  margin-bottom: 0.5em;
-  font-weight: normal; }
+  font-family: 'Didact Gothic', sans-serif;
+  margin-bottom: 0.5em; }
 
 h1 {
   font-size: 2.6em; }
@@ -95,7 +96,8 @@ blockquote .author:before {
   min-height: 100vh; }
 
 .site-main {
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding-bottom: 6rem; }
 
 .wrapper {
   padding: 0.5rem 10%; }
@@ -114,48 +116,39 @@ blockquote .author:before {
   display: flex;
   align-items: center;
   transition: color 0.3s ease; }
-
-.site-title h1 {
-  margin: 0; }
-
-.site-title::before {
-  display: block;
-  content: '';
-  background-image: url("https://instudio.mabangapp.com/img/039/CR0088/CR0088g05.jpg");
-  background-size: 100%;
-  width: 3em;
-  height: 3em;
-  margin-right: 0.5rem;
-  transition: background-image 0.3s ease; }
-
-.site-title:hover {
-  color: var(--primary-color);
-  cursor: pointer; }
-
-.site-title:hover::before {
-  background-image: url("https://i.ibb.co/HrxkWS9/orange-paw.jpg");
-  background-size: 100%; }
+  .site-title h1 {
+    margin: 0; }
+  .site-title::before {
+    display: block;
+    content: '';
+    background-image: url("https://instudio.mabangapp.com/img/039/CR0088/CR0088g05.jpg");
+    background-size: 100%;
+    width: 3em;
+    height: 3em;
+    margin-right: 0.5rem;
+    transition: background-image 0.3s ease; }
+  .site-title:hover {
+    color: var(--primary-color);
+    cursor: pointer; }
+  .site-title:hover::before {
+    background-image: url("https://i.ibb.co/HrxkWS9/orange-paw.jpg");
+    background-size: 100%; }
 
 .site-nav {
   margin-left: auto; }
-
-.site-nav ul {
-  display: flex;
-  align-items: center;
-  padding: 0; }
-
-.site-nav i {
-  margin-right: 0.5rem; }
-
-.site-nav li {
-  transition: color 0.3s ease;
-  font-size: 1.2em; }
-
-.site-nav li:hover {
-  color: var(--primary-color); }
-
-.site-nav li:not(:last-child) {
-  margin-right: 2em; }
+  .site-nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0; }
+  .site-nav i {
+    margin-right: 0.5rem; }
+  .site-nav li {
+    transition: color 0.3s ease;
+    font-size: 1.2em; }
+    .site-nav li:hover {
+      color: var(--primary-color); }
+    .site-nav li:not(:last-child) {
+      margin-right: 2em; }
 
 .hamburger_checkbox {
   position: absolute;
@@ -174,13 +167,13 @@ blockquote .author:before {
     top: 0;
     left: 0;
     opacity: 0; }
-  .site-nav ul {
-    opacity: 0;
-    display: flex;
-    flex-direction: column; }
-  .site-nav ul li {
-    opacity: 0;
-    transition: opacity 0.15s ease-in; }
+    .site-nav ul {
+      opacity: 0;
+      display: flex;
+      flex-direction: column; }
+      .site-nav ul li {
+        opacity: 0;
+        transition: opacity 0.15s ease-in; }
   .hamburger_label {
     display: block;
     margin-left: auto; }
@@ -188,32 +181,32 @@ blockquote .author:before {
     position: static;
     opacity: 1;
     flex: 1 0 100%; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-    width: 100%;
-    position: absolute;
-    top: 4.5em;
-    left: 0; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li {
-    margin: 0;
-    text-align: center;
-    padding: 0.7em 0;
-    opacity: 1;
-    width: 100%;
-    background: #FFF; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
-    padding-bottom: 0.8em; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(2) {
-    transition-delay: 0.1s; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(3) {
-    transition-delay: 0.2s; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(4) {
-    transition-delay: 0.3s; }
-  .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
-    margin-bottom: 1em; } }
+    .hamburger_checkbox:checked + .site-header .site-nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 1;
+      width: 100%;
+      position: absolute;
+      top: 4.5em;
+      left: 0; }
+      .hamburger_checkbox:checked + .site-header .site-nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 0.7em 0;
+        opacity: 1;
+        width: 100%;
+        background: #FFF; }
+        .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
+          padding-bottom: 0.8em; }
+        .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(2) {
+          transition-delay: 0.1s; }
+        .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(3) {
+          transition-delay: 0.2s; }
+        .hamburger_checkbox:checked + .site-header .site-nav ul li:nth-child(4) {
+          transition-delay: 0.3s; }
+        .hamburger_checkbox:checked + .site-header .site-nav ul li:last-child {
+          margin-bottom: 1em; } }
 
 @media screen and (max-width: 480px) {
   .site-title::before {
@@ -231,9 +224,8 @@ blockquote .author:before {
   color: var(--secondary-dark-color);
   padding-top: 3em;
   padding-bottom: 2em; }
-
-.site-footer a:hover {
-  border-bottom: 1px solid var(--secondary-dark-color); }
+  .site-footer a:hover {
+    border-bottom: 1px solid var(--secondary-dark-color); }
 
 .contacts a {
   margin-left: 0.5rem; }
@@ -276,49 +268,47 @@ blockquote .author:before {
 .jumbotron {
   position: relative;
   overflow: hidden; }
-
-.jumbotron:before {
-  display: block;
-  content: '';
-  background-image: url("http://www.ingridkuhn.com/themes/happypaws/img/slide1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top: 50%; }
-
-.jumbotron-content {
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transform: rotate(55deg);
-  -webkit-animation: slideFromLeft 1s ease-in-out;
-          animation: slideFromLeft 1s ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  color: white; }
-
-.jumbotron-text {
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  z-index: 20;
-  transform: rotate(-55deg); }
-
-.jumbotron-text p:nth-child(2) {
-  font-size: 1.5em;
-  margin-bottom: 0.5rem; }
-
-.jumbotron-text p:nth-child(4) {
-  margin-bottom: 1rem; }
+  .jumbotron:before {
+    display: block;
+    content: '';
+    background-image: url("http://www.ingridkuhn.com/themes/happypaws/img/slide1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 50%; }
+  .jumbotron-content {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(55deg);
+    -webkit-animation: slideFromLeft 1s ease-in-out;
+            animation: slideFromLeft 1s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    color: white; }
+  .jumbotron-text {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 20;
+    transform: rotate(-55deg); }
+    .jumbotron-text p:nth-child(2) {
+      font-size: 1.5em;
+      margin-bottom: 0.5rem; }
+    .jumbotron-text p:nth-child(4) {
+      margin-bottom: 1rem; }
 
 .btn-about {
   background: var(--secondary-color);
   padding: 1rem 2rem;
   border-radius: 0.5em;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  transition: background 0.2s ease-in; }
+  .btn-about:hover {
+    background: var(--primary-color); }
 
 @media screen and (max-width: 960px) {
   .jumbotron-content {
@@ -343,32 +333,32 @@ blockquote .author:before {
     top: 0;
     width: 100%;
     font-size: 1.75vw; }
-  .jumbotron-text p, .jumbotron-text h1 {
-    margin: 0;
-    padding: 0;
-    text-transform: none; }
-  .jumbotron-text h1 {
-    margin-right: 0.5em;
-    width: 45%;
-    text-align: right;
-    font-size: 2em;
-    margin-top: 1.75rem;
-    transform: translateX(-10%); }
-  .jumbotron-text p:nth-child(2) {
-    margin: 0;
-    margin-top: 1.75rem;
-    font-size: 2em;
-    width: 45%;
-    text-align: left;
-    transform: translateX(-10%); }
-  .jumbotron-text p:nth-child(3) {
-    width: 47%;
-    text-align: right; }
-  .jumbotron-text p:nth-child(4) {
-    text-align: left;
-    width: 47%;
-    margin: 0;
-    margin-left: 0.5em; }
+    .jumbotron-text p, .jumbotron-text h1 {
+      margin: 0;
+      padding: 0;
+      text-transform: none; }
+    .jumbotron-text h1 {
+      margin-right: 0.5em;
+      width: 45%;
+      text-align: right;
+      font-size: 2em;
+      margin-top: 1.75rem;
+      transform: translateX(-10%); }
+    .jumbotron-text p:nth-child(2) {
+      margin: 0;
+      margin-top: 1.75rem;
+      font-size: 2em;
+      width: 45%;
+      text-align: left;
+      transform: translateX(-10%); }
+    .jumbotron-text p:nth-child(3) {
+      width: 47%;
+      text-align: right; }
+    .jumbotron-text p:nth-child(4) {
+      text-align: left;
+      width: 47%;
+      margin: 0;
+      margin-left: 0.5em; }
   .btn-about {
     padding: 0.7em 1.5em; } }
 
@@ -397,3 +387,125 @@ blockquote .author:before {
     top: 100%; }
   to {
     top: 50%; } }
+
+.section-title {
+  margin: 8rem auto;
+  display: flex;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .section-title {
+      margin: 4rem auto; } }
+  .section-title h2 {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    position: relative; }
+    .section-title h2 img {
+      background: #FFF;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -35%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      border-radius: 50%;
+      width: 3rem;
+      border: 2px solid var(--primary-color); }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem; }
+  @media screen and (max-width: 768px) {
+    .services {
+      grid-template-columns: 1fr; } }
+  .services .service-img {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 5px 12px 3px rgba(0, 0, 0, 0.5); }
+    .services .service-img::before {
+      display: block;
+      content: '';
+      padding-top: 56.25%; }
+    .services .service-img img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .services .service-content {
+    margin-top: 1.5rem; }
+    .services .service-content h3 {
+      text-align: center; }
+
+.offer {
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+  align-items: center;
+  background-image: url("https://kagitbutik.com/wp-content/uploads/2018/06/kuslar.png"), url("http://www.silhouettestyle.com.au/media/catalog/product/cache/1/image/265x/9df78eab33525d08d6e5fb8d27136e95/4/B/4BI002S.png_1.png");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-color: var(--primary-color);
+  background-attachment: fixed;
+  color: #FFF; }
+  @media screen and (max-width: 960px) {
+    .offer {
+      padding-top: 2rem;
+      padding-bottom: 2rem; } }
+  @media screen and (max-width: 768px) {
+    .offer {
+      grid-template-columns: 1fr; }
+      .offer-img {
+        display: none; } }
+  .offer-img {
+    overflow: hidden;
+    position: relative; }
+    .offer-img::before {
+      display: block;
+      content: '';
+      padding-top: 177.77%; }
+    .offer-img img {
+      display: block;
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5rem;
+  position: relative; }
+  @media screen and (max-width: 960px) {
+    .reviews {
+      grid-gap: 2rem; } }
+  @media screen and (max-width: 768px) {
+    .reviews {
+      grid-template-columns: 1fr;
+      grid-row-gap: 4rem; } }
+  .reviews .review {
+    border: 2px solid var(--primary-color);
+    box-shadow: 2px 5px 12px 3px rgba(0, 0, 0, 0.5); }
+    .reviews .review-img {
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 2px solid var(--primary-color);
+      position: absolute;
+      transform: translate(30%, -50%);
+      background: #FFF;
+      box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3); }
+      .reviews .review-img img {
+        width: 6em;
+        height: auto; }
+    .reviews .review-content {
+      padding: 1.5rem;
+      padding-top: 3rem; }

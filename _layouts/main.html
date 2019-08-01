@@ -15,9 +15,6 @@
     <div class="site">
         {% include header.html %}
         <main class="site-main">
-            {% if page.home %}
-            {% include jumbotron.html %}
-            {% endif%}
             {{content}}
         </main>
         {% include footer.html %}
