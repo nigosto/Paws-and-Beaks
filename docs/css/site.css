@@ -599,6 +599,38 @@ blockquote .author:before {
       width: 100%;
       height: auto; }
 
+.staff {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5rem; }
+  .staff .member {
+    text-align: center; }
+    .staff .member .img-container {
+      position: relative;
+      overflow: hidden; }
+      .staff .member .img-container::before {
+        display: block;
+        content: '';
+        padding-top: 100%; }
+      .staff .member .img-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .staff .member-info {
+      margin-top: 2rem; }
+    .staff .member-social {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      padding-left: 0; }
+      .staff .member-social li {
+        font-size: 1.5em;
+        list-style: none inside; }
+
 @-webkit-keyframes comeFromLeft {
   from {
     opacity: 0;

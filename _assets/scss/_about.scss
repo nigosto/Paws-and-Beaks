@@ -112,6 +112,53 @@
     }
 }
 
+.staff {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5rem;
+
+    .member {
+        text-align: center;
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                display: block;
+                content: '';
+                padding-top: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 60%; left: 50%;
+                transform: translate(-50%, -50%); 
+                
+            }
+        }
+
+        &-info {
+            margin-top: 2rem;
+        }
+
+        &-social {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            padding-left: 0;
+
+            li {
+                font-size: 1.5em;
+                list-style: none inside;
+            }
+        }
+    }
+}
+
 @keyframes comeFromLeft {
     from {
         opacity: 0;
