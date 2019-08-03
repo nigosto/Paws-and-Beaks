@@ -4,6 +4,12 @@
     min-height: 100vh;
 }
 
+@mixin mq($width) {
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+
 .site-main {
     flex-grow: 1;
     padding-bottom: 6rem;
@@ -11,4 +17,35 @@
 
 .wrapper {
     padding: 0.5rem 10%;
+}
+
+.section-title {
+    margin: 8rem auto;
+    display: flex;
+    justify-content: center;
+
+    @include mq(768px) {
+        margin: 4rem auto;
+    }
+
+    h2 {
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--primary-color);
+        position: relative;
+        
+        img {
+            background: #FFF;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -35%;
+            transform: translateX(-50%);
+            overflow: hidden;
+            border-radius: 50%;
+            width: 3rem;
+            border: 2px solid var(--primary-color);
+        }
+    }
 }

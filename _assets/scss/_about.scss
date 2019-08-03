@@ -1,0 +1,137 @@
+.about-jumbotron {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        padding-top: 25%;
+        background-image: url('https://dogsaholic.com/wp-content/uploads/2015/03/Puppy-itching-in-a-grass.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 65%;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        background: rgba(black, 0.5);
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 2;
+    }
+
+    &-content {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 4;
+        text-align: center;
+        width: 100%;
+
+        h1 {
+            font-size: 5vw;
+        }
+    }
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-rows: repeat(2, minmax(15rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+
+    .info, .philosophy {
+        grid-column: span 2;
+    }
+
+    .info-img, .philosophy-img {
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            display: block;
+            content: '';
+            padding-top: 50%;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    background: var(--primary-color);
+
+    &.animate {
+        .brand {
+            &:nth-child(1),  &:nth-child(2) {
+                animation: comeFromLeft 0.8s ease-in-out;
+                animation-fill-mode: both;
+            }
+        
+            &:nth-child(3),  &:nth-child(4) {
+                animation: comeFromRight 0.8s ease-in-out;
+                animation-fill-mode: both;
+            }
+        }
+    }
+    
+    .brand {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:nth-child(1),  &:nth-child(2) {
+            left: -50%;
+            opacity: 0;
+        }
+    
+        &:nth-child(3),  &:nth-child(4) {
+            right: -50%;
+            opacity: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@keyframes comeFromLeft {
+    from {
+        opacity: 0;
+        left: -50%;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes comeFromRight {
+    from {
+        opacity: 0;
+        right: -50%;
+    }
+
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}

@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/9578b4b943.js"></script>
+    <script src="{{ site.baseurl }}/scripts/animateOnScroll.js"></script>
     <title>{{site.title}}</title>
 </head>
 
 <body>
     <div class="site">
         {% include header.html %}
-        <main class="site-main">
-            {{content}}
-        </main>
-        {% include footer.html %}
+        <main class="site-main"> 
+            {{content}}  
+        </main>  
+        {% include footer.html %}  
     </div>
 </body>
 

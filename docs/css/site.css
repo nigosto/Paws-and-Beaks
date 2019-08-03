@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css");
 :root {
   --primary-color: #d35400;
   --secondary-color: #f29c12;
@@ -101,6 +102,31 @@ blockquote .author:before {
 
 .wrapper {
   padding: 0.5rem 10%; }
+
+.section-title {
+  margin: 8rem auto;
+  display: flex;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .section-title {
+      margin: 4rem auto; } }
+  .section-title h2 {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    position: relative; }
+    .section-title h2 img {
+      background: #FFF;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -35%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      border-radius: 50%;
+      width: 3rem;
+      border: 2px solid var(--primary-color); }
 
 .site-header {
   display: flex;
@@ -388,31 +414,6 @@ blockquote .author:before {
   to {
     top: 50%; } }
 
-.section-title {
-  margin: 8rem auto;
-  display: flex;
-  justify-content: center; }
-  @media screen and (max-width: 768px) {
-    .section-title {
-      margin: 4rem auto; } }
-  .section-title h2 {
-    display: inline-block;
-    text-align: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary-color);
-    position: relative; }
-    .section-title h2 img {
-      background: #FFF;
-      display: block;
-      position: absolute;
-      left: 50%;
-      bottom: -35%;
-      transform: translateX(-50%);
-      overflow: hidden;
-      border-radius: 50%;
-      width: 3rem;
-      border: 2px solid var(--primary-color); }
-
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -509,3 +510,123 @@ blockquote .author:before {
     .reviews .review-content {
       padding: 1.5rem;
       padding-top: 3rem; }
+
+.about-jumbotron {
+  position: relative; }
+  .about-jumbotron:before {
+    display: block;
+    content: '';
+    padding-top: 25%;
+    background-image: url("https://dogsaholic.com/wp-content/uploads/2015/03/Puppy-itching-in-a-grass.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 65%; }
+  .about-jumbotron:after {
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; }
+  .about-jumbotron-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 4;
+    text-align: center;
+    width: 100%; }
+    .about-jumbotron-content h1 {
+      font-size: 5vw; }
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  grid-template-rows: repeat(2, minmax(15rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem; }
+  .about .info, .about .philosophy {
+    grid-column: span 2; }
+  .about .info-img, .about .philosophy-img {
+    overflow: hidden;
+    position: relative; }
+    .about .info-img::before, .about .philosophy-img::before {
+      display: block;
+      content: '';
+      padding-top: 50%; }
+    .about .info-img img, .about .philosophy-img img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: auto; }
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background: var(--primary-color); }
+  .brands.animate .brand:nth-child(1), .brands.animate .brand:nth-child(2) {
+    -webkit-animation: comeFromLeft 0.8s ease-in-out;
+            animation: comeFromLeft 0.8s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .brands.animate .brand:nth-child(3), .brands.animate .brand:nth-child(4) {
+    -webkit-animation: comeFromRight 0.8s ease-in-out;
+            animation: comeFromRight 0.8s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .brands .brand {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .brands .brand:nth-child(1), .brands .brand:nth-child(2) {
+      left: -50%;
+      opacity: 0; }
+    .brands .brand:nth-child(3), .brands .brand:nth-child(4) {
+      right: -50%;
+      opacity: 0; }
+    .brands .brand img {
+      width: 100%;
+      height: auto; }
+
+@-webkit-keyframes comeFromLeft {
+  from {
+    opacity: 0;
+    left: -50%; }
+  to {
+    left: 0;
+    opacity: 1; } }
+
+@keyframes comeFromLeft {
+  from {
+    opacity: 0;
+    left: -50%; }
+  to {
+    left: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes comeFromRight {
+  from {
+    opacity: 0;
+    right: -50%; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+@keyframes comeFromRight {
+  from {
+    opacity: 0;
+    right: -50%; }
+  to {
+    right: 0;
+    opacity: 1; } }
