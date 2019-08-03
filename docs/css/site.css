@@ -549,6 +549,12 @@ blockquote .author:before {
   grid-template-rows: repeat(2, minmax(15rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 6rem; }
+  @media screen and (max-width: 960px) {
+    .about {
+      grid-template-columns: 1fr 1fr; } }
+  @media screen and (max-width: 768px) {
+    .about .info-img, .about .philosophy-img {
+      display: none; } }
   .about .info, .about .philosophy {
     grid-column: span 2; }
   .about .info-img, .about .philosophy-img {
@@ -574,6 +580,9 @@ blockquote .author:before {
   padding-bottom: 4rem;
   padding-top: 4rem;
   background: var(--primary-color); }
+  @media screen and (max-width: 480px) {
+    .brands {
+      grid-template-columns: repeat(2, 1fr); } }
   .brands.animate .brand:nth-child(1), .brands.animate .brand:nth-child(2) {
     -webkit-animation: comeFromLeft 0.8s ease-in-out;
             animation: comeFromLeft 0.8s ease-in-out;
@@ -584,6 +593,17 @@ blockquote .author:before {
             animation: comeFromRight 0.8s ease-in-out;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both; }
+  @media screen and (max-width: 480px) {
+    .brands.animate .brand:nth-child(1), .brands.animate .brand:nth-child(3) {
+      -webkit-animation: comeFromLeft 0.8s ease-in-out;
+              animation: comeFromLeft 0.8s ease-in-out;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
+    .brands.animate .brand:nth-child(2), .brands.animate .brand:nth-child(4) {
+      -webkit-animation: comeFromRight 0.8s ease-in-out;
+              animation: comeFromRight 0.8s ease-in-out;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; } }
   .brands .brand {
     overflow: hidden;
     display: flex;
@@ -595,6 +615,12 @@ blockquote .author:before {
     .brands .brand:nth-child(3), .brands .brand:nth-child(4) {
       right: -50%;
       opacity: 0; }
+    @media screen and (max-width: 480px) {
+      .brands .brand:nth-child(1), .brands .brand:nth-child(3) {
+        left: -50%; }
+      .brands .brand:nth-child(2), .brands .brand:nth-child(4) {
+        left: initial;
+        right: -50%; } }
     .brands .brand img {
       width: 100%;
       height: auto; }
@@ -603,6 +629,12 @@ blockquote .author:before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 5rem; }
+  @media screen and (max-width: 960px) {
+    .staff {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 480px) {
+    .staff {
+      grid-template-columns: 1fr; } }
   .staff .member {
     text-align: center; }
     .staff .member .img-container {
