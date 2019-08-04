@@ -1,0 +1,160 @@
+.contacts-jumbotron {
+    position: relative;
+    background-image: url('https://i.pinimg.com/originals/22/28/81/22288165d075dc155dcb80edc3c77d5d.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+
+    &:before {
+        display: block;
+        content: '';
+        padding-top: 25%;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        background: rgba(black, 0.5);
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 2;
+    }
+
+    &-content {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+        text-align: center;
+        width: 100%;
+        z-index: 3;
+
+        h1 {
+            font-size: 5vw;
+        }
+    }
+}
+
+.get-in-touch {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-gap: 3rem;
+
+    @include mq(960px) {
+        grid-template-columns: 1fr;
+    }
+
+    .message-form {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, minmax(1fr, 5rem));
+        grid-gap: 1rem;
+
+        
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 0;
+            background: #EEE;
+            color: black;
+            border-radius: 0.3rem;
+        }
+
+        .firstName, .lastName, .email, .pet, .breed, .petName, .message {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .firstName, .lastName {
+            grid-column: span 3;
+        }
+
+        .email {
+            grid-column: span 6;
+        }
+
+        .pet, .breed, .petName {
+            grid-column: span 2;
+        }
+
+        .message, input[type="submit"] {
+            grid-column: span 6;
+        }
+
+        @include mq(480px) {
+            grid-template-columns: 1fr;
+
+            .firstName, .lastName {
+                grid-column: span 1;
+            }
+    
+            .email {
+                grid-column: span 1;
+            }
+    
+            .pet, .breed, .petName {
+                grid-column: span 1;
+            }
+    
+            .message, input[type="submit"] {
+                grid-column: span 1;
+            }
+        }
+
+        input[type="submit"] {
+            background: var(--primary-color);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            cursor: pointer;
+            transition: background 0.2s ease-in;
+
+            &:hover {
+                background: var(--secondary-color);
+            }
+        }
+
+    }
+
+    .location {
+        @include mq(960px) {
+            height: 30rem;
+        }
+
+        @include mq(480px) {
+            height: 20rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.faq {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    @include mq(960px) {
+        grid-template-columns: 1fr;
+    }
+
+    .questions-img {
+        display: flex;
+        justify-content: center;
+
+        @include mq(960px) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 160%;
+            height: auto;
+        }
+    }
+}

@@ -694,3 +694,114 @@ blockquote .author:before {
   to {
     right: 0;
     opacity: 1; } }
+
+.contacts-jumbotron {
+  position: relative;
+  background-image: url("https://i.pinimg.com/originals/22/28/81/22288165d075dc155dcb80edc3c77d5d.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% 50%; }
+  .contacts-jumbotron:before {
+    display: block;
+    content: '';
+    padding-top: 25%; }
+  .contacts-jumbotron:after {
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; }
+  .contacts-jumbotron-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    z-index: 3; }
+    .contacts-jumbotron-content h1 {
+      font-size: 5vw; }
+
+.get-in-touch {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 3rem; }
+  @media screen and (max-width: 960px) {
+    .get-in-touch {
+      grid-template-columns: 1fr; } }
+  .get-in-touch .message-form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, minmax(1fr, 5rem));
+    grid-gap: 1rem; }
+    .get-in-touch .message-form input, .get-in-touch .message-form textarea {
+      padding: 0.5rem;
+      border: 0;
+      background: #EEE;
+      color: black;
+      border-radius: 0.3rem; }
+    .get-in-touch .message-form .firstName, .get-in-touch .message-form .lastName, .get-in-touch .message-form .email, .get-in-touch .message-form .pet, .get-in-touch .message-form .breed, .get-in-touch .message-form .petName, .get-in-touch .message-form .message {
+      display: flex;
+      flex-direction: column; }
+    .get-in-touch .message-form .firstName, .get-in-touch .message-form .lastName {
+      grid-column: span 3; }
+    .get-in-touch .message-form .email {
+      grid-column: span 6; }
+    .get-in-touch .message-form .pet, .get-in-touch .message-form .breed, .get-in-touch .message-form .petName {
+      grid-column: span 2; }
+    .get-in-touch .message-form .message, .get-in-touch .message-form input[type="submit"] {
+      grid-column: span 6; }
+    @media screen and (max-width: 480px) {
+      .get-in-touch .message-form {
+        grid-template-columns: 1fr; }
+        .get-in-touch .message-form .firstName, .get-in-touch .message-form .lastName {
+          grid-column: span 1; }
+        .get-in-touch .message-form .email {
+          grid-column: span 1; }
+        .get-in-touch .message-form .pet, .get-in-touch .message-form .breed, .get-in-touch .message-form .petName {
+          grid-column: span 1; }
+        .get-in-touch .message-form .message, .get-in-touch .message-form input[type="submit"] {
+          grid-column: span 1; } }
+    .get-in-touch .message-form input[type="submit"] {
+      background: var(--primary-color);
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease-in; }
+      .get-in-touch .message-form input[type="submit"]:hover {
+        background: var(--secondary-color); }
+  @media screen and (max-width: 960px) {
+    .get-in-touch .location {
+      height: 30rem; } }
+  @media screen and (max-width: 480px) {
+    .get-in-touch .location {
+      height: 20rem; } }
+  .get-in-touch .location iframe {
+    width: 100%;
+    height: 100%; }
+
+.faq {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; }
+  @media screen and (max-width: 960px) {
+    .faq {
+      grid-template-columns: 1fr; } }
+  .faq .questions-img {
+    display: flex;
+    justify-content: center; }
+    @media screen and (max-width: 960px) {
+      .faq .questions-img {
+        display: none; } }
+    .faq .questions-img img {
+      display: block;
+      width: 160%;
+      height: auto; }
