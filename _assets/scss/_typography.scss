@@ -60,18 +60,18 @@ p, ul, ol {
     padding-bottom: 1.5em;
 }
 
-ul, ol {
-    padding-left: 2em;
-} 
+// ul, ol {
+//     padding-left: 2em;
+// } 
 
-ul ul, ol ol, ul ol, ol ul {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
+// // ul ul, ol ol, ul ol, ol ul {
+// //     padding-top: 0.5em;
+// //     padding-bottom: 0.5em;
+// // }
 
-ul > li > ul > li {
-    list-style-type: armenian;
-}
+// // ul > li > ul > li {
+// //     list-style-type: armenian;
+// // }
 
 ol > li > ol > li {
     list-style-type: upper-roman;

@@ -1,0 +1,74 @@
+.services-jumbotron {
+    position: relative;
+
+    &:before {
+        @include pseudo;
+        padding-top: 25%;
+        background-image: url('https://www.esaote.com/uploads/pics/header-us-mri-vet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 55%;
+    }
+
+    &:after {
+        @include pseudo;
+        background: rgba(black, 0.5);
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 2;
+    }
+
+    &-content {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        color: #FFF;
+        z-index: 4;
+
+        h1 {
+            font-size: 5vw;
+        }
+    }
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.offers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    text-align: center;
+}
+
+.adoption {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2rem;
+
+    &-img {
+        display: flex;
+        flex-direction: column;
+
+        &::before {
+            @include pseudo;
+            flex: 1 0 40px;
+        }
+
+        &::after {
+            @include pseudo;
+            flex: 1 0 40px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

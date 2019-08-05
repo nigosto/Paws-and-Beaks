@@ -144,8 +144,21 @@
     }
 
     .questions-img {
+        overflow: hidden;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+
+        &::before {
+            display: block;
+            content: '';
+            flex: 1 0 40px;
+        }
+
+        &::after {
+            display: block;
+            content: '';
+            flex: 1 0 40px;
+        }
 
         @include mq(960px) {
             display: none;
@@ -153,7 +166,7 @@
 
         img {
             display: block;
-            width: 160%;
+            width: 100%;
             height: auto;
         }
     }

@@ -65,16 +65,6 @@ body, table, form, input, select, option, textarea {
 p, ul, ol {
   padding-bottom: 1.5em; }
 
-ul, ol {
-  padding-left: 2em; }
-
-ul ul, ol ol, ul ol, ol ul {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
-
-ul > li > ul > li {
-  list-style-type: armenian; }
-
 ol > li > ol > li {
   list-style-type: upper-roman; }
 
@@ -628,7 +618,8 @@ blockquote .author:before {
 .staff {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 5rem; }
+  grid-column-gap: 5rem;
+  padding-left: 0; }
   @media screen and (max-width: 960px) {
     .staff {
       grid-template-columns: repeat(2, 1fr); } }
@@ -661,7 +652,10 @@ blockquote .author:before {
       padding-left: 0; }
       .staff .member-social li {
         font-size: 1.5em;
-        list-style: none inside; }
+        list-style: none inside;
+        transition: color 0.3s ease-in-out; }
+        .staff .member-social li:hover {
+          color: var(--secondary-color); }
 
 @-webkit-keyframes comeFromLeft {
   from {
@@ -796,12 +790,84 @@ blockquote .author:before {
     .faq {
       grid-template-columns: 1fr; } }
   .faq .questions-img {
+    overflow: hidden;
     display: flex;
-    justify-content: center; }
+    flex-direction: column; }
+    .faq .questions-img::before {
+      display: block;
+      content: '';
+      flex: 1 0 40px; }
+    .faq .questions-img::after {
+      display: block;
+      content: '';
+      flex: 1 0 40px; }
     @media screen and (max-width: 960px) {
       .faq .questions-img {
         display: none; } }
     .faq .questions-img img {
       display: block;
-      width: 160%;
+      width: 100%;
+      height: auto; }
+
+.services-jumbotron {
+  position: relative; }
+  .services-jumbotron:before {
+    display: block;
+    content: '';
+    padding-top: 25%;
+    background-image: url("https://www.esaote.com/uploads/pics/header-us-mri-vet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 55%; }
+  .services-jumbotron:after {
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; }
+  .services-jumbotron-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    z-index: 4; }
+    .services-jumbotron-content h1 {
+      font-size: 5vw; }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem; }
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  text-align: center; }
+
+.adoption {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2rem; }
+  .adoption-img {
+    display: flex;
+    flex-direction: column; }
+    .adoption-img::before {
+      display: block;
+      content: '';
+      flex: 1 0 40px; }
+    .adoption-img::after {
+      display: block;
+      content: '';
+      flex: 1 0 40px; }
+    .adoption-img img {
+      width: 100%;
       height: auto; }

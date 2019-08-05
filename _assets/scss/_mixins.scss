@@ -1,0 +1,10 @@
+@mixin mq($width) {
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+
+@mixin pseudo {
+    display: block;
+    content: '';
+}
