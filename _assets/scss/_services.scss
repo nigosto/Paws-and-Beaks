@@ -37,7 +37,60 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+
+    @include mq(960px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(480px) {
+        grid-template-columns: 1fr;
+    }
+    
+    .product {
+        text-align: center;
+        border: 1.5px solid var(--primary-color);
+
+        &-title {
+            margin-bottom: 2rem;
+            background: var(--primary-color);
+            color: #FFF;
+            padding: 1rem 0;
+        }
+
+        &-img {
+            position: relative;
+            overflow: hidden;
+            margin: 0 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 5px 0px rgba(0,0,0,0.75);
+            transition: box-shadow 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 10px 7px rgba(0,0,0,0.3);
+            }
+
+            &:before {
+                @include pseudo;
+                padding-top: 100%;
+            }
+
+            img {
+                display: block;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-info {
+            margin: 0 2rem;
+
+        }
+    }
 }
 
 .offers {
@@ -45,6 +98,66 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2rem;
     text-align: center;
+
+    @include mq(960px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+    }
+
+    @include mq(480px) {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-title {
+        background: var(--primary-dark-color);
+        color: #FFF;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .offer-price {
+        background: var(--secondary-dark-color);
+        padding: 2rem 0;
+
+        p {
+            padding: 0;
+
+            &:last-child {
+                position: relative;
+                top: -0.5rem;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 3em;
+        }
+    }
+
+    .offer-services {
+        padding: 2rem 0;
+        border: 1.5px solid var(--secondary-dark-color);
+
+        li {
+
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
+
+            .btn-sign-up {
+                display: inline-block;
+                background: var(--secondary-color);
+                padding: 1.5rem 1.5rem;
+                color: #FFF;
+                transition: background 0.3s ease-in;
+
+                &:hover {
+                    background: var(--primary-color);
+                }
+            }
+        }
+    }
+
 }
 
 .adoption {
@@ -69,6 +182,75 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    @include mq(768px) {
+        display: block;
+
+        &-img {
+            display: none;
+        }
+    }
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+
+    &-item {
+        position: relative;
+
+        &:hover &-img{
+            transform: scale(1.3);
+            z-index: 4;
+        }
+
+        &:hover &-info {
+            display: block;
+            background: #FFF;
+            position: absolute;
+            top: -15%; left: 115%;
+            width: 20vw;
+            z-index: 4;
+        }
+
+        &:hover:nth-child(4n) &-info {
+            display: block;
+            background: #FFF;
+            position: absolute;
+            right: initial;
+            top: 115%; left: -15%;
+            width: 20vw;
+            z-index: 4;
+        }
+
+        &-img {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                @include pseudo;
+                padding-top: 56.25%;
+            }
+
+            img {
+                display: block;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-info {
+            display: none;
+            padding: 1rem 2rem;
         }
     }
 }
