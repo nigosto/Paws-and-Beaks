@@ -4,7 +4,8 @@
   --primary-color: #d35400;
   --secondary-color: #f29c12;
   --primary-dark-color: #323232;
-  --secondary-dark-color: #eee; }
+  --secondary-dark-color: #eee;
+  --primary-border-radius: 0.3rem; }
 
 * {
   margin: 0;
@@ -251,23 +252,20 @@ blockquote .author:before {
 
 .newsletter form {
   display: flex; }
-
-.newsletter input {
-  height: 2.3em;
-  border: 0;
-  background: #FFF;
-  padding: 0 1rem;
-  border-radius: 0.3rem; }
-
-.newsletter input[type="text"] {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-
-.newsletter input[type="submit"] {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background: #555;
-  color: var(--secondary-dark-color); }
+  .newsletter form input {
+    height: 2.3em;
+    border: 0;
+    background: #FFF;
+    padding: 0 1rem;
+    border-radius: var(--primary-border-radius); }
+    .newsletter form input[type="text"] {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .newsletter form input[type="submit"] {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background: #555;
+      color: var(--secondary-dark-color); }
 
 @media screen and (max-width: 768px) {
   .site-footer {
@@ -742,7 +740,7 @@ blockquote .author:before {
       border: 0;
       background: #EEE;
       color: black;
-      border-radius: 0.3rem; }
+      border-radius: var(--primary-border-radius); }
     .get-in-touch .message-form .firstName, .get-in-touch .message-form .lastName, .get-in-touch .message-form .email, .get-in-touch .message-form .pet, .get-in-touch .message-form .breed, .get-in-touch .message-form .petName, .get-in-touch .message-form .message {
       display: flex;
       flex-direction: column; }
@@ -1051,7 +1049,7 @@ blockquote .author:before {
         background: var(--secondary-color);
         color: #FFF;
         padding: 0.5rem 1.5rem;
-        border-radius: 0.3rem;
+        border-radius: var(--primary-border-radius);
         transition: background 0.3s ease-in;
         border: 0; }
         .gallery-item-info .adopt-btn:hover {
