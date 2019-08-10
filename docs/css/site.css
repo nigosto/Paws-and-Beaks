@@ -478,11 +478,14 @@ blockquote .author:before {
   position: relative; }
   @media screen and (max-width: 960px) {
     .reviews {
-      grid-gap: 2rem; } }
+      grid-gap: 3rem; } }
   @media screen and (max-width: 768px) {
     .reviews {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-row-gap: 4rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews {
+      grid-template-columns: 1fr; } }
   .reviews .review {
     border: 2px solid var(--primary-color);
     box-shadow: 2px 5px 12px 3px rgba(0, 0, 0, 0.5); }
@@ -496,8 +499,10 @@ blockquote .author:before {
       background: #FFF;
       box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3); }
       .reviews .review-img img {
-        width: 6em;
-        height: auto; }
+        width: 4.5em;
+        height: auto;
+        position: relative;
+        bottom: -7px; }
     .reviews .review-content {
       padding: 1.5rem;
       padding-top: 3rem; }

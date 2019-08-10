@@ -100,12 +100,16 @@
     position: relative;
 
     @include mq(960px) {
-        grid-gap: 2rem;       
+        grid-gap: 3rem;       
     }
 
     @include mq(768px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-row-gap: 4rem;
+    }
+
+    @include mq(480px) {
+        grid-template-columns: 1fr;
     }
 
     .review {
@@ -123,8 +127,10 @@
             box-shadow: 0 0 12px 3px rgba(0,0,0,0.3);
 
             img {
-                width: 6em;
+                width: 4.5em;
                 height: auto;
+                position: relative;
+                bottom: -7px;
             }
         }
 
